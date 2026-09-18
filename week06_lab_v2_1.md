@@ -427,8 +427,10 @@ ElevatedButton(
 
 > ✅ **Checkpoint 3.1** ถ่ายภาพหน้าจอ Debug Console ที่แสดง Status Code (ควรเป็น `201 Created`) พร้อม Response Body 
 ```text
-บันทึกรูปและคำตอบที่นี่
+สามารถส่งข้อมูลด้วย HTTP POST ไปยัง JSONPlaceholder ได้สำเร็จ โดยได้รับ Status Code 201 Created และได้รับข้อมูลตอบกลับจากเซิร์ฟเวอร์
 ```
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/e5548e94-a8f6-4bf7-9bb3-d080464ab0bc" />
+
 
 ### ขั้นตอนที่ 3.2 — 🧠 คิดเอง/ออกแบบเอง
 
