@@ -249,8 +249,12 @@ class WeatherService {
 > ✅ **Checkpoint 2.2** บันทึกผลการตรวจสอบ `statusCode` อย่างน้อย 2 กรณี (สำเร็จ และ 404) ตามเกณฑ์ข้างต้น
 
 ```text
-บันทึกรูปและคำตอบที่นี่
+กรณีที่ 1: ค้นหาเมือง Bangkok ได้สำเร็จ Status Code 200 และแสดงข้อมูลสภาพอากาศ
+กรณีที่ 2: ค้นหาเมือง Abcxyz999 ซึ่งไม่มีอยู่จริง ระบบตอบกลับ 404 และแสดงข้อความว่าไม่พบเมืองที่ค้นหา
 ```
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/89ef14f8-afc7-47f3-9b3a-892ce03f0a16" />
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/1b41e8c5-c38b-4480-bc43-e8924f5fec69" />
+
 
 ### ขั้นตอนที่ 2.4 — 🧠 คิดเอง/ออกแบบเอง
 
