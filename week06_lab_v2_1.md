@@ -78,8 +78,17 @@ https://api.openweathermap.org/data/2.5/weather?q=Bangkok&appid=YOUR_API_KEY&uni
 > ✅ **Checkpoint 1.1** ถ่ายภาพหน้าจอ Postman ที่แสดง Status Code `200` พร้อม Response Body แบบเต็ม จากนั้นให้เขียนระบุใน ว่า key ใดใน JSON ที่คาดว่าจะต้องใช้แสดงผลในแอป (เช่น ชื่อเมือง, อุณหภูมิ, คำอธิบายสภาพอากาศ)
 
 ```text
-บันทึกรูปและคำตอบที่นี่
+JSON Key	ค่าที่ได้	ใช้แสดง
+name	กรุงเทพมหานคร	ชื่อเมือง
+main.temp	31.56	อุณหภูมิ °C
+main.feels_like	38.56	อุณหภูมิที่รู้สึก
+weather[0].description	เมฆกระจาย	สภาพอากาศ
+main.humidity	74	ความชื้น %
+wind.speed	0.94	ความเร็วลม
+clouds.all	47	ปริมาณเมฆ %
 ```
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/816113b7-3a80-4f35-9522-559f9e0e4c47" />
+
 ### ขั้นตอนที่ 1.2 — 🧠 คิดเอง/ออกแบบเอง
 
 ออกแบบการทดสอบกรณีผิดพลาด (error case) อย่างน้อย 1 กรณี โดยเปลี่ยนค่าพารามิเตอร์บางตัวใน Request ให้เป็นสิ่งที่คาดว่าจะทำให้เซิร์ฟเวอร์ตอบกลับด้วย error (ตัวอย่างแนวทางที่เลือกได้ เช่น เปลี่ยนชื่อเมืองเป็นชื่อที่ไม่มีอยู่จริง, ใส่ `appid` ผิด, หรือลบ `appid` ออกไปเลย) **ก่อนกด Send ให้เขียนคาดการณ์ ก่อนว่า นักศึกษาคิดว่า Status Code จะเป็นอะไร** แล้วจึงทดสอบจริงเพื่อเทียบกับที่คาดไว้
@@ -87,8 +96,13 @@ https://api.openweathermap.org/data/2.5/weather?q=Bangkok&appid=YOUR_API_KEY&uni
 > ✅ **Checkpoint 1.2** บันทึกด้านล่างว่านักศึกษาเลือกทดสอบกรณีใด คาดการณ์ Status Code ไว้ว่าอะไร และ Status Code จริงที่ได้คืออะไร (ตรงหรือไม่ตรงกับที่คาดไว้) พร้อมอธิบายว่าผลลัพธ์ที่ได้ตรงกับช่วง Status Code ใดตามตารางในบทเรียนหัวข้อ 6.3
 
 ```text
-บันทึกรูปและคำตอบที่นี่
+ทดสอบ: เปลี่ยนชื่อเมืองจาก Bangkok เป็น Abcxyz999 ซึ่งเป็นชื่อเมืองที่ไม่มีอยู่จริง
+คาดว่า Status Code จะเป็น 404 Not Found เพราะไม่พบเมืองที่ระบุ
+Status Code ที่ได้จริง: 404 Not Found
+ผลการทดสอบ: ตรงกับที่คาดการณ์ไว้
 ```
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/fccfb549-a973-43ac-b5e5-361a8714f832" />
+
 ---
 
 ## ส่วนที่ 2: สร้าง Model Class และเรียก API ด้วย http Package
